@@ -1,0 +1,21 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  Height = 512
+  Width = 657
+  object FDQuery1: TFDQuery
+    Connection = SQLConexao
+    SQL.Strings = (
+      'Select*from usuario')
+    Left = 24
+    Top = 48
+  end
+  object SQLConexao: TFDConnection
+    Left = 72
+    Top = 48
+  end
+  object FDPhysFBDriverLink1: TFDPhysFBDriverLink
+    Left = 184
+    Top = 48
+  end
+end

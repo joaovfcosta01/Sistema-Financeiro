@@ -1,0 +1,18 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 512
+  Width = 657
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Users\Usuario\Desktop\Sistema Financeiro\db\SISTEMA ' +
+        'FINANCEIRO.FDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'Server=localhost'
+      'Port=3050'
+      'DriverID=FB')
+    Left = 248
+    Top = 72
+  end
+end

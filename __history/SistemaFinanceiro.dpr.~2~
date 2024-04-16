@@ -1,0 +1,16 @@
+program SistemaFinanceiro;
+
+uses
+  Vcl.Forms,
+  View.principal in 'scr\View\View.principal.pas' {frmPrincipal},
+  View.principal.cadastro in 'scr\View\View.principal.cadastro.pas' {FormCadastroPadrao};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TFormCadastroPadrao, FormCadastroPadrao);
+  Application.Run;
+end.

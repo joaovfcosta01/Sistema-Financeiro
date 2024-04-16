@@ -1,0 +1,24 @@
+program SistemaFinanceiro;
+
+uses
+  Vcl.Forms,
+  View.principal in 'scr\View\View.principal.pas' {frmPrincipal},
+  View.principal.cadastro in 'scr\View\View.principal.cadastro.pas' {FormCadastroPadrao},
+  View.splash in 'scr\View\View.splash.pas' {frmSplash},
+  Vcl.Themes,
+  Vcl.Styles,
+  udm in 'udm.pas' {DataModule1: TDataModule},
+  View.usuario in 'scr\View\View.usuario.pas' {frmUsuarios};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Sapphire Kamri');
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TFormCadastroPadrao, FormCadastroPadrao);
+  Application.CreateForm(TfrmUsuarios, frmUsuarios);
+  Application.Run;
+end.
